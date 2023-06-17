@@ -1,15 +1,15 @@
-calculateButton.addEventListener('click', calculateAge);
+calculateButton.addEventListener('click', calcularIdd);
 
-function calculateAge() {
-  const birthdate = new Date(birthdateInput.value);
-  const today = new Date();
+function calcularIdd() {
+  const datadeNasc = new Date(birthdateInput.value);
+  const hoje = new Date();
 
-  const ageInMilliseconds = today - birthdate;
-  const ageInYears = 
-  Math.floor(ageInMilliseconds /(1000 * 60 * 60 * 24 * 365.25));
+  const iddEmMilissegundos = hoje - datadeNasc;
+  const iddEmAnos = 
+  Math.floor(iddEmMilissegundos /(1000 * 60 * 60 * 24 * 365.25));
 
-  if(ageInYears >= 0) {
-    resultElement.textContent = 'Você tem ${ageInYears}';
+  if(iddEmAnos >= 0) {
+    resultElement.textContent = 'Você tem ${iddEmAnos}';
   }else{
     resultElement.textContent = 'Inválido';
   }
